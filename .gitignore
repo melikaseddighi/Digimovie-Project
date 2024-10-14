@@ -1,5 +1,4 @@
 /node_modules/*
 !node_modules/@fortawesome
 !node_modules/axios
-!node_modules/bootstrap
 !node_modules/node-sass
