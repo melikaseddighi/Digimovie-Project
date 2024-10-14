@@ -1,0 +1,82 @@
+.content {
+  &__trailer {
+    box-shadow: 0 1px 2px 2px rgba(0, 0, 0, 0.2);
+    &-icon {
+      width: 40%;
+      clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    &-text {
+      width: 60%;
+    }
+  }
+  &__subtitle {
+    left: 0;
+    top: 40%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    @include Responsive(phoneL) {
+      display: none;
+    }
+    & > span {
+      transform: rotate(-45deg);
+    }
+  }
+  &__description {
+    line-height: 2.5rem;
+  }
+  &__download {
+    position: absolute;
+    bottom: -1px;
+    left: 2rem;
+  }
+  &__icon {
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    transform: rotate(45deg);
+    & > svg {
+      transform: rotate(-45deg);
+    }
+  }
+  &__image {
+    @include Responsive(phone) {
+      height: 25rem;
+    }
+  }
+}
+
+.loading-container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  z-index: 1000;
+}
+
+.loading-spinner {
+  border: 4px solid #333;
+  border-top-color: transparent;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+}
+
+.loading-text {
+  margin-left: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

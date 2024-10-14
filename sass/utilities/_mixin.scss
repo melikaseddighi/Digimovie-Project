@@ -1,0 +1,66 @@
+@mixin centerizeTag($align: center, $justify: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin positionCenter() {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin lineBreak($line: 2) {
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* 
+!0-576px= Phone
+!576px-768px= Phone Landscape
+!768px-992px= Tablet Portrait
+!992px-1200px= Tablet Landscape
+!1200px - 1800px= Laptop
+!1800px > = Big Desktop
+*/
+
+@mixin Responsive($breakpoint) {
+  //* phone BreakPoints -------- 576px ~ 36em
+  @if $breakpoint==phone {
+    @media only screen and (max-width: 36em) {
+      @content;
+    }
+  }
+
+  //* Phone Landscape BreakPoints ------ 768px ~ 48em
+
+  @if $breakpoint==phoneL {
+    @media only screen and (max-width: 48em) {
+      @content;
+    }
+  }
+
+  //* Tablet BreakPoints ----- 992px ~ 62em
+  @if $breakpoint==tablet {
+    @media only screen and (max-width: 62em) {
+      @content;
+    }
+  }
+
+  //* Tablet Landscape BreakPoints ---- 1200px~75em
+  @if $breakpoint==tabletL {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
+  }
+
+  //* Laptop BreakPoints ---- 1800px~112.5em
+  @if $breakpoint==laptop {
+    @media only screen and (max-width: 112.5em) {
+      @content;
+    }
+  }
+}

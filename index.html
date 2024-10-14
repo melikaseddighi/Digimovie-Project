@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>دیجی موویز - دانلود و تماشای فیلم و سریال</title>
+    <link
+      rel="stylesheet"
+      href="node_modules/@fortawesome/fontawesome-free/css/all.min.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="public/css/style.css" />
+  </head>
+  <body class="">
+    <header class="header py-5">
+      <div class="container-md container-fluid align-items-center">
+        <div class="row">
+          <div class="col-6">
+            <section class="header__info">
+              <div class="header__info-user d-flex gap-1">
+                <div
+                  class="header__info-login py-2 px-5 bg-primary rounded-5 d-flex gap-2 fs-4 align-items-center">
+                  <i
+                    class="fa-solid fa-user-plus fa-rotate-by text-tertiary"></i>
+                  <span class="text-white">ثبت نام</span>
+                </div>
+                <div
+                  class="header__info-register py-2 px-5 bg-primary rounded-5 d-flex gap-2 fs-4 align-items-center">
+                  <i
+                    class="fa-solid fa-user-plus fa-rotate-by text-tertiary"></i>
+                  <span class="text-white">ورود</span>
+                </div>
+              </div>
+              <div></div>
+            </section>
+          </div>
+          <div class="col-6">
+            <section
+              class="header__nav d-flex justify-content-end align-items-center gap-3">
+              <div
+                class="header__change d-flex gap-5 justify-content-between bg-primary rounded-5 align-items-center p-1">
+                <div
+                  class="header__item d-flex align-items-center"
+                  data-right="-40px">
+                  <i class="fa-solid fa-moon text-tertiary fs-1"></i>
+                </div>
+                <div
+                  class="header__item d-flex align-items-center"
+                  data-right="40px">
+                  <i class="fa-solid fa-sun text-tertiary fs-1"></i>
+                </div>
+                <div class="header__item-circle"></div>
+              </div>
+              <div class="h-100 w-50 d-none d-sm-flex">
+                <div class="w-100 header__item-logo"></div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-menu bg-primary mt-5 p-6">
+        <div
+          class="container-md container-fluid d-flex justify-content-between align-items-center flex-column flex-xl-row gap-4 gap-xl-0">
+          <div class="row d-sm-flex d-none">
+            <ul class="d-flex gap-9">
+              <li class="d-flex align-items-center gap-3">
+                <i class="fa-solid fa-house text-tertiary fs-1"></i>
+                <div class="d-flex flex-column gap-1">
+                  <span class="text-white fw-bold">خانه</span>
+                  <span class="text-tertiary">HOME</span>
+                </div>
+              </li>
+              <li class="d-flex align-items-center gap-3">
+                <i class="fa-solid fa-film text-tertiary fs-1"></i>
+                <div class="d-flex flex-column gap-1">
+                  <span class="text-white fw-bold">دانلود فیلم</span>
+                  <span class="text-tertiary">MOVIES</span>
+                </div>
+              </li>
+              <li class="d-flex align-items-center gap-3">
+                <i class="fa-solid fa-tv text-tertiary fs-1"></i>
+                <div class="d-flex flex-column gap-1">
+                  <span class="text-white fw-bold">دانلود سریال</span>
+                  <span class="text-tertiary">SERIES</span>
+                </div>
+              </li>
+              <li class="d-flex align-items-center gap-3">
+                <i class="fa-solid fa-masks-theater text-tertiary fs-1"></i>
+                <div class="d-flex flex-column gap-1">
+                  <span class="text-white fw-bold">هنرمندان</span>
+                  <span class="text-tertiary">ARTISTS</span>
+                </div>
+              </li>
+              <li class="d-flex align-items-center gap-3">
+                <i class="fa-solid fa-headphones-simple text-tertiary fs-1"></i>
+                <div class="d-flex flex-column gap-1">
+                  <span class="text-white fw-bold">تماس با ما</span>
+                  <span class="text-tertiary">CONTACT</span>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="header__search-content">
+            <input
+              class="header__search bg-secondary rounded-pill border-0 py-3 px-4 text-white fs-5"
+              placeholder="جستجو کنید..." />
+          </div>
+        </div>
+      </div>
+    </header>
+    <body>
+      <section
+        class="filter container-md container-fluid bg-primary mt-5 rounded-4">
+        <div class="row">
+          <div class="col-xl-2 col-md-2 p-0 d-none d-lg-flex">
+            <div class="filter__search h-100 bg-search flex-center">
+              <svg style="fill: white" class="icon icon_adv_search w-50">
+                <use xlink:href="#adv_search"></use>
+                <symbol
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 57 57"
+                  id="adv_search">
+                  <path
+                    fill-rule="evenodd"
+                    class="searchwhitepart"
+                    d="M.984 14.25V1.781C.984.797 1.767 0 2.734 0s1.75.797 1.75 1.781V14.25c0 .983-.783 1.781-1.75 1.781s-1.75-.798-1.75-1.781zm24.502 1.781c.967 0 1.75-.798 1.75-1.781V1.781c0-.984-.783-1.781-1.75-1.781-.968 0-1.751.797-1.751 1.781V14.25c0 .983.783 1.781 1.751 1.781zm22.751 0c.967 0 1.75-.798 1.75-1.781V1.781c0-.984-.783-1.781-1.75-1.781s-1.75.797-1.75 1.781V14.25c0 .983.783 1.781 1.75 1.781zM2.734 39.187c-.967 0-1.75.797-1.75 1.781v12.469c0 .985.783 1.781 1.75 1.781s1.75-.796 1.75-1.781V40.968c0-.984-.783-1.781-1.75-1.781zm21.001 10.688v3.562c0 .985.783 1.781 1.751 1.781.967 0 1.75-.796 1.75-1.781v-3.562h-3.501zm-5.25-30.282c-.967 0-1.75.798-1.75 1.782v12.469c0 .984.783 1.781 1.75 1.781s1.75-.797 1.75-1.781V21.375c0-.984-.783-1.782-1.75-1.782zm8.751 5.344v-3.562c0-.984-.783-1.782-1.75-1.782-.968 0-1.751.798-1.751 1.782v3.562h3.501zm22.751-1.781v-1.781c0-.984-.783-1.782-1.75-1.782s-1.75.798-1.75 1.782v1.781h3.5zm6.488 30.803a1.803 1.803 0 010 2.519 1.73 1.73 0 01-2.475 0l-7.693-7.83c-2.371 1.878-5.341 3.008-8.571 3.008-7.719 0-14.001-6.393-14.001-14.25 0-7.858 6.282-14.25 14.001-14.25 7.72 0 14.001 6.392 14.001 14.25 0 3.287-1.11 6.31-2.955 8.724l7.693 7.829zm-8.238-16.553c0-5.893-4.711-10.688-10.501-10.688-5.79 0-10.5 4.795-10.5 10.688 0 5.893 4.71 10.687 10.5 10.687s10.501-4.794 10.501-10.687z"></path>
+                  <path
+                    fill-rule="evenodd"
+                    fill="#EB8307"
+                    d="M7.984 14.25V1.781C7.984.797 8.767 0 9.734 0h8.751c.967 0 1.75.797 1.75 1.781V14.25c0 .983-.783 1.781-1.75 1.781H9.734c-.967 0-1.75-.798-1.75-1.781zm3.501-1.782h5.25V3.562h-5.25v8.906zm19.251 1.782V1.781c0-.984.783-1.781 1.75-1.781h8.751c.967 0 1.75.797 1.75 1.781V14.25c0 .983-.783 1.781-1.75 1.781h-8.751c-.967 0-1.75-.798-1.75-1.781zm3.5-1.782h5.25V3.562h-5.25v8.906zm-14.001 28.5v12.469c0 .985-.783 1.781-1.75 1.781H9.734c-.967 0-1.75-.796-1.75-1.781V40.968c0-.984.783-1.781 1.75-1.781h8.751c.967 0 1.75.797 1.75 1.781zm-3.5 1.782h-5.25v8.906h5.25V42.75zM.984 33.844V21.375c0-.984.783-1.782 1.75-1.782h8.751c.967 0 1.75.798 1.75 1.782v12.469c0 .984-.783 1.781-1.75 1.781H2.734c-.967 0-1.75-.797-1.75-1.781zm3.5-1.782h5.25v-8.906h-5.25v8.906zm28.002 5.344c0-2.947 2.355-5.344 5.25-5.344.968 0 1.75-.797 1.75-1.781 0-.984-.782-1.781-1.75-1.781-4.824 0-8.75 3.995-8.75 8.906 0 .984.783 1.781 1.75 1.781s1.75-.797 1.75-1.781z"></path>
+                </symbol>
+              </svg>
+            </div>
+          </div>
+          <div class="col-xl-7 col-12 p-5">
+            <div
+              class="d-flex justify-content-sm-between justify-content-center align-items-center w-100 gap-2 flex-wrap flex-sm-nowrap">
+              <div>
+                <div
+                  class="filter__series bg-search rounded-pill py-2 px-4 d-flex justify-content-between align-items-center gap-3">
+                  <span
+                    class="text-white filter__post fs-4"
+                    data-posttype="true"
+                    >فیلم</span
+                  >
+                  <span
+                    class="text-white filter__post fs-4"
+                    data-posttype="false"
+                    >سریال</span
+                  >
+                  <input
+                    id="filter-postType"
+                    type="hidden"
+                    name="adv_post_type"
+                    value="true" />
+                </div>
+              </div>
+              <div class="d-flex gap-2 align-items-center w-100">
+                <span class="text-white">کارگردان</span>
+                <input
+                  id="crews"
+                  class="bg-search rounded-pill py-2 px-3 text-white border-0 w-100"
+                  placeholder="christopher nolan" />
+              </div>
+              <div class="d-flex gap-2 align-items-center w-100">
+                <span class="text-white">بازیگران</span>
+                <input
+                  id="actors"
+                  class="bg-search rounded-pill py-2 px-3 text-white border-0 w-100"
+                  placeholder="leonardo dicaprio" />
+              </div>
+            </div>
+            <div
+              class="mt-5 d-flex justify-content-between align-items-center w-100 gap-3 flex-wrap flex-sm-nowrap">
+              <div class="d-flex gap-2 align-items-center w-100">
+                <span class="text-white">کشور</span>
+                <select
+                  id="filter-country"
+                  class="filter__select bg-search rounded-pill py-2 px-3 text-white border-0">
+                  <option value="">همه</option>
+                </select>
+              </div>
+              <div class="d-flex gap-2 align-items-center w-100">
+                <span class="text-white">رده سنی</span>
+                <select
+                  id="filter-age"
+                  class="filter__select bg-search rounded-pill py-2 px-3 text-white border-0">
+                  <option value="">همه</option>
+                  <option value="">+18</option>
+                </select>
+              </div>
+              <div class="d-flex gap-2 align-items-center w-100">
+                <span class="text-white">ژانر</span>
+                <select
+                  id="select-gener"
+                  class="filter__select bg-search rounded-pill py-2 px-3 text-white border-0">
+                  <option value="">همه</option>
+                </select>
+              </div>
+            </div>
+            <div
+              class="mt-5 d-flex justify-content-between align-items-center flex-wrap flex-sm-nowrap w-100 gap-3">
+              <div class="d-flex gap-2 align-items-center w-100">
+                <span class="text-white">کیفیت</span>
+                <select
+                  id="filter-quality"
+                  class="filter__select bg-search rounded-pill py-2 px-3 text-white border-0">
+                  <option value="">همه</option>
+                </select>
+              </div>
+              <div class="d-flex gap-2 align-items-center w-100">
+                <span class="text-white">شبکه</span>
+                <select
+                  id="filter-network"
+                  class="filter__select bg-search rounded-pill py-2 px-3 text-white border-0">
+                  <option value="">همه</option>
+                  <option value="">TV</option>
+                </select>
+              </div>
+              <div class="d-flex gap-2 align-items-center w-100">
+                <span class="text-white">ترتیب</span>
+                <select
+                  id="filter-sort"
+                  class="filter__select bg-search rounded-pill py-2 px-3 text-white border-0">
+                  <option value="">همه</option>
+                  <option value="vote_average.desc">بهترین امتیاز</option>
+                  <option value="vote_average.asc">بدترین امتیاز</option>
+                  <option value="popularity.desc">بیشترین محبوبیت</option>
+                  <option value="release_date.desc">جدیدترین</option>
+                  <option value="release_date.asc">قدیمی ترین</option>
+                  <option value="vote_count.desc">بیشترین نظرات</option>
+                  <option value="original_title.desc">
+                    بر اساس حروف الفبا
+                  </option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-3 col-12 p-4">
+            <div class="range-slider-container">
+              <div class="range-slider">
+                <div class="range-slider-track"></div>
+                <div class="range-slider-thumb range-slider-thumb-max"></div>
+                <div class="range-slider-thumb range-slider-thumb-min"></div>
+
+                <input
+                  type="hidden"
+                  name="min-year"
+                  id="min-year"
+                  value="1888" />
+                <input
+                  type="hidden"
+                  name="max-year"
+                  id="max-year"
+                  value="2024" />
+              </div>
+              <div class="range-slider-values">
+                <div
+                  class="d-flex justify-content-between align-items-center w-100">
+                  <div>سال ساخت:</div>
+                  <div style="direction: ltr">
+                    <span id="min-year-value">1888</span>
+                    <span> - </span>
+                    <span id="max-year-value">2024</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- رنج جدید -->
+            <div class="range-slider-container-2">
+              <div class="range-slider-2">
+                <div class="range-slider-track"></div>
+                <div class="range-slider-thumb range-slider-thumb-min-2"></div>
+                <div class="range-slider-thumb range-slider-thumb-max-2"></div>
+                <input
+                  type="hidden"
+                  name="min-value"
+                  id="min-value"
+                  value="0" />
+                <input
+                  type="hidden"
+                  name="max-value"
+                  id="max-value"
+                  value="10" />
+              </div>
+              <div class="range-slider-values">
+                <div
+                  class="d-flex justify-content-between align-items-center w-100">
+                  <div>امتیاز:</div>
+                  <div style="direction: ltr">
+                    <span id="min-value-text">0</span>
+                    <span> - </span>
+                    <span id="max-value-text">10</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              id="filter-btn"
+              class="filter__btn bg-tertiary w-100 btn py-2 fw-bold fs-4">
+              جستجو
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="container-md container-fluid mt-4">
+        <div class="row">
+          <section class="col-3 p-0 d-none d-lg-inline ps-3">
+            <div class="content__series bg-primary p-3 rounded-3">
+              <div
+                class="text-center d-flex justify-content-center align-items-center gap-2">
+                <i class="fas fa-tv fs-4 text-tertiary"></i>
+                <span class="fs-4 text-white">سریال های به روز شده</span>
+              </div>
+              <div
+                class="content__details flex-center flex-column my-4 bg-search rounded-4 overflow-hidden">
+                <img
+                  class="w-100 object-fit-cover"
+                  src="public/images/ser-1.jpg" />
+                <span class="py-2 text-white fw-bold fs-3"
+                  >House of the Dragon</span
+                >
+              </div>
+            </div>
+          </section>
+          <section class="content col-12 col-lg-9 p-0 pe-2">
+            <template id="movie-list-item">
+              <div class="bg-primary rounded-4 p-5 position-relative mb-8">
+                <div class="row gap-4 gap-sm-0">
+                  <div class="col-12 col-sm-3">
+                    <div class="w-100">
+                      <img
+                        id="movie-image"
+                        class="content__image object-fit-cover w-100 rounded-3"
+                        src="" />
+                    </div>
+                    <div
+                      class="mt-2 content__trailer text-center bg-primary rounded-3 d-flex justify-content-between align-items-center overflow-hidden">
+                      <div class="h-100 content__trailer-icon bg-search p-3">
+                        <i class="fa-solid fa-film text-tertiary fs-1"></i>
+                      </div>
+                      <span class="content__trailer-text text-white fs-5"
+                        >مشاهده تریلر</span
+                      >
+                    </div>
+                  </div>
+                  <div class="col-12 col-sm-9 px-2">
+                    <div class="w-100 flex-between">
+                      <div>
+                        <h1 class="text-white fs-2">
+                          دانلود فیلم
+                          <span id="movie-name"> Adagio 2023 </span>
+                        </h1>
+                        <div class="mt-3 fs-4">
+                          <i class="fa-solid fa-tv text-tertiary"></i>
+                          <span class="text-white"
+                            >کیفیت:
+                            <span class="text-white">1080P BluRay</span>
+                          </span>
+                        </div>
+                      </div>
+                      <div class="text-center text-white">
+                        <div
+                          class="py-1 border-bottom border-1 border-tertiary">
+                          <span>
+                            10/
+                            <span
+                              id="movie-rate"
+                              class="fw-bold text-tertiary fs-3"
+                              >6.6</span
+                            >
+                          </span>
+                        </div>
+                        <div class="py-1">
+                          <span id="movie-vote">2K votes</span>
+                        </div>
+                        <div class="bg-tertiary p-1 rounded-2">
+                          <span>IMDB</span>
+                        </div>
+                      </div>
+                    </div>
+                    <ul>
+                      <li class="d-flex align-items-center gap-1 fs-4 mt-3">
+                        <i class="fa-solid fa-clock text-tertiary"></i>
+                        <span class="text-white">تاریخ انتشار:</span>
+                        <span id="movie-create" class="text-white"> </span>
+                      </li>
+                      <li class="d-flex align-items-center gap-1 fs-4 mt-3">
+                        <i class="fa-solid fa-clock text-tertiary"></i>
+                        <span class="text-white">ژانر:</span>
+                        <span id="movie-gener" class="text-white"
+                          >جنایی،درام</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-center gap-1 fs-4 mt-3">
+                        <i class="fa-solid fa-clock text-tertiary"></i>
+                        <span class="text-white">کارگردان:</span>
+                        <span class="text-white">stefano sollima</span>
+                      </li>
+                      <li class="d-flex align-items-center gap-1 fs-4 mt-3">
+                        <i class="fa-solid fa-clock text-tertiary"></i>
+                        <span class="text-white">ستارگان :</span>
+                        <span class="text-white"
+                          >Pierfrancesco Favino,Toni Servillo,Valerio
+                          Mastandrea</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-center gap-1 fs-4 mt-3">
+                        <i class="fa-solid fa-clock text-tertiary"></i>
+                        <span class="text-white"> محصول کشور :</span>
+                        <span id="movie-country" class="text-white">
+                          ایتالیا</span
+                        >
+                      </li>
+                    </ul>
+                    <div
+                      class="p-3 content__subtitle position-absolute bg-success text-white flex-center rounded-2">
+                      <span class="fw-bold">CC</span>
+                    </div>
+                    <div class="mt-5">
+                      <span
+                        id="movie-rate-user"
+                        class="bg-success py-1 px-1 rounded-2 text-white"
+                        >64</span
+                      >
+                      <span class="text-white fs-4">مجموع امتیاز کاربران</span>
+                    </div>
+                    <div class="w-75 text-white fs-5 mt-3">
+                      <p
+                        id="movie-description"
+                        class="ellipsis-2 content__description">
+                        داستان پسر یک خلافکار سابق که در جستجوی دوست پدرش، درگیر
+                        یک‌سری باجگیری و پلیس‌های فاسد می‌شود که...
+                      </p>
+                    </div>
+                    <div class="w-100">
+                      <div
+                        class="content__download d-flex justify-content-end flex-column align-items-center gap-2 fs-5 fw-bold">
+                        <span class="text-white"
+                          >ادامه /
+                          <span class="text-tertiary">دانلود</span>
+                        </span>
+                        <svg
+                          style="width: 16rem"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 110 27"
+                          class="bg_crev">
+                          <path
+                            d="M0 27c.417-.01.838-.03 1.3-.03a46.441 46.441 0 0023.462-6.34L43.127 4.11a16.829 16.829 0 0122.04 0l13.471 12.12.085-.04a45.881 45.881 0 0029.971 10.78c.463 0 .888.02 1.309.03H0z"
+                            class="moresvgposts"
+                            fill-rule="evenodd"></path>
+                        </svg>
+                        <div
+                          class="content__icon flex-center bg-tertiary rounded-2">
+                          <i class="fa-solid fa-download text-white"></i>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </template>
+          </section>
+          <div class="loading-container">
+            <div class="loading-spinner"></div>
+            <span style="direction: ltr" class="loading-text">Loading...</span>
+          </div>
+        </div>
+      </div>
+    </body>
+    <footer></footer>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/@fortawesome/fontawesome-free/js/all.min.js"></script>
+    <script src="node_modules/axios/dist/axios.min.js"></script>
+
+    <script src="filter.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

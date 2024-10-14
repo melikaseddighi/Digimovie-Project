@@ -1,0 +1,46 @@
+body {
+  &.light-mode {
+    background-color: #f2f2f2;
+    .header-menu,
+    .filter,
+    .content__trailer,
+    .content__series,
+    .content > div {
+      background-color: $primary-light !important;
+    }
+    input,
+    select,
+    option,
+    .range-slider,
+    .range-slider-2,
+    .filter__series,
+    .content__trailer-icon,
+    .header__info-register,
+    .header__info-login,
+    .header__change,
+    .content__details,
+    .filter__search {
+      background-color: $search-light !important;
+    }
+    h1,
+    a,
+    ul,
+    li,
+    span,
+    div,
+    input,
+    select {
+      color: $black !important;
+    }
+    .bg_crev {
+      fill: $search-light !important;
+    }
+    .icon_adv_search {
+      fill: $black !important;
+    }
+    .header__item-logo {
+      background: url(../../public/images/logo-dark.png) no-repeat center /
+        cover;
+    }
+  }
+}
